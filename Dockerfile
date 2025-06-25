@@ -22,7 +22,7 @@ RUN GOOS=linux GOARCH=amd64 go build -o main .
 
 # Stage 2
 # Reduce the image size using a distroless image to run application
-FROM gcr.io/distroless/static:nonroot
+FROM gcr.io/distroless/base-debian12
 # gcr.io/distroless/static: is for statically compilled apps (most Go apps are by default). 
 #nonroot: safer, runs as non-root
 
